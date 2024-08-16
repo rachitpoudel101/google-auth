@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Login</title>
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+    <div>
+        <div>
+            {% if not status %}
+                <a href="{% url 'gmail_authenticate' %}" onclick="gmailAuthenticate()" title="Google">Google</a>
+            {% else %}
+                <p>You are verified</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
